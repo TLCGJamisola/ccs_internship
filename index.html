@@ -1,0 +1,912 @@
+<html>
+    <head>
+        <title>TLC-CCS - The Internship Experience</title>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+            html body * {
+                box-sizing: border-box;
+                font-family: "Open Sans", Arial, sans-serif;
+            }
+            .gridywrap div[class*="gridy"] {
+                background: #eee;
+                box-shadow: inset 0 0 0 1px #ddd;
+                padding: 15px;
+                float: left;
+                position: relative;
+            }
+            .gridywrap .gridy-1,
+            .gridywrap .gridy-2,
+            .gridywrap .gridy-3 {
+                width: 320px;
+                overflow: hidden;
+            }
+
+            .gridywrap .gridy-1 {
+                width: 100%;
+            }
+            .gridywrap .gridy-2 {
+                width: 100%;
+            }
+            .gridywrap .gridy-3 {
+                width: 100%;
+            }
+
+            .gridywrap .gridyhe-1 {
+                height: 320px;
+            }
+            .gridywrap .gridyhe-2 {
+                height: 320px;
+            }
+
+            @media screen and (min-width: 640px) {
+                .gridywrap .gridyhe-2 {
+                    height: 320px;
+                }
+                .gridywrap {
+                    width: 100%;
+                }
+                .gridywrap .gridy-1 {
+                    width: 50%;
+                }
+                .gridywrap .gridy-2 {
+                    width: 50%;
+                }
+                .gridywrap .gridy-3 {
+                    width: 100%;
+                }
+            }
+            @media screen and (min-width: 1024px) {
+                .gridywrap .gridy-1 {
+                    width: 33.3%;
+                }
+                .gridywrap .gridy-2 {
+                    width: 66.6%;
+                }
+                .gridywrap .gridy-3 {
+                    width: 100%;
+                }
+                .gridywrap .gridyhe-2 {
+                    height: 640px;
+                }
+            }
+
+            /*styling*/
+            .gridywrap .gridimg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow: hidden;
+                background-position: center center;
+                background-size: cover;
+            }
+            .gridywrap .gridimg img {
+                width: 100%;
+            }
+            .gridywrap .gridinfo {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.4);
+                text-align: center;
+                transition: all 0.8s;
+            }
+            .gridywrap .gridinfo h3 {
+                font-size: 24px;
+                color: #fff;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin: 130px 0 20px;
+                position: relative;
+            }
+            .gridywrap .gridinfo h3:after {
+                content: "";
+                width: 25px;
+                border-top: 4px solid #fff;
+                display: block;
+                margin: 0 auto;
+                margin-top: 25px;
+            }
+            .gridywrap .gridinfo .gridmeta {
+                transition-delay: 0.25s;
+            }
+            .gridywrap .gridinfo .gridmeta p {
+                display: inline-block;
+                font-size: 13px;
+                color: #fff;
+                margin-bottom: 15px;
+            }
+            .gridywrap .gridinfo .gridmeta p i {
+                margin-right: 5px;
+            }
+            .gridywrap .gridinfo .gridmeta p.gridwho {
+                margin-left: 25px;
+            }
+            .gridywrap .gridinfo p.gridexerpt {
+                width: 60%;
+                margin: 0 auto;
+                line-height: 22px;
+                margin-bottom: 25px;
+                color: #fff;
+                transition-delay: 0.5s;
+            }
+
+            .gridywrap .gridinfo * {
+                opacity: 0;
+                transition: all 0.8s;
+            }
+            .gridywrap .gridinfo h3 {
+                opacity: 1;
+            }
+            .gridywrap .gridinfo .grid-btn {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 auto;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                border-radius: 25px;
+                border: 1px solid #fff;
+                display: block;
+                overflow: hidden;
+            }
+            .gridywrap .gridinfo .grid-btn:hover {
+                width: 75px;
+                background: rgba(0, 0, 0, 0.3);
+            }
+            .gridywrap .gridinfo .grid-btn span {
+                opacity: 0;
+                display: none;
+                transition: opacity 0.8s;
+            }
+            .gridywrap .gridinfo .grid-btn:hover span {
+                opacity: 1;
+                display: inline;
+            }
+            .gridywrap .gridinfo .grid-btn:hover i {
+                opacity: 0;
+                display: none;
+            }
+
+            .gridywrap .gridinfo:hover * {
+                opacity: 0.7;
+            }
+            .gridywrap .gridinfo:hover p {
+                opacity: 1;
+            }
+            .gridywrap .gridinfo:hover {
+                background: rgba(158, 12, 73, 0.7);
+            }
+            .gridywrap .gridinfo:hover h3 {
+                margin-top: 70px;
+                opacity: 1;
+            }
+
+            .intro {
+                text-align: center;
+                padding: 25px;
+                background: #111;
+                color: #ddd;
+            }
+            h1 {
+                font-size: 48px;
+                font-weight: 300;
+                padding: 15px 0;
+            }
+            .intro p {
+                opacity: 0.5;
+                font-size: 12px;
+            }
+            .intro p a {
+                color: #fa8cd3;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="intro">
+            <h1>The Internship Experience</h1>
+            <p>The Lewis College - College of Computer Studies</p>
+        </div>
+
+        <div class="gridywrap">
+            <div class="gridy-2 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/pura.jpg)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Kaye Pura</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Gubat</p>
+                    </div>
+                    <p class="gridexerpt">
+                        kayepura.wixsite.com/kpuraweeklyblog
+                    </p>
+                    <a
+                        href="https://kayepura.wixsite.com/kpuraweeklyblog"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/felismino.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Ella Felismino</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Gubat</p>
+                    </div>
+                    <p class="gridexerpt">
+                        ellafelismino.wixsite.com/myweeklyblog
+                    </p>
+                    <a
+                        href="https://ellafelismino.wixsite.com/myweeklyblog"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <div class="gridy-1 gridyhe-2">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/debulos.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Brenda Debulos</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Gubat</p>
+                    </div>
+                    <p class="gridexerpt">
+                        debulosbrenda08.wixsite.com/my-site-2
+                    </p>
+                    <a
+                        href="https://debulosbrenda08.wixsite.com/my-site-2"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <div class="gridy-2 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/hapin.JPG)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Jay Zel Hapin</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Gubat</p>
+                    </div>
+                    <p class="gridexerpt">
+                        jayzelhapin590.wixsite.com/jayzel-1
+                    </p>
+                    <a
+                        href="https://jayzelhapin590.wixsite.com/jayzel-1"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/joson.png)"
+                >
+                    &nbsp;
+                </div>
+                <div class="gridinfo">
+                    <h3>Kenn Micri Joson</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">
+                            Department of Education - Sorsogon
+                        </p>
+                    </div>
+                    <p class="gridexerpt">josontlcojtblog.wordpress.com</p>
+                    <a
+                        href="https://josontlcojtblog.wordpress.com/"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/nava.jpg)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Camilla Nava</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">SAFADECO</p>
+                    </div>
+                    <p class="gridexerpt">navaojtjourney.42web.io</p>
+                    <a
+                        href="https://navaojtjourney.42web.io/"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <!-- second part -->
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/lagata.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Rica Marie Lagata</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Sorsogon City</p>
+                    </div>
+                    <p class="gridexerpt">lagataricamarie.wordpress.com</p>
+                    <a
+                        href="https://lagataricamarie.wordpress.com"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/derilo.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Jake Derilo</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">MetroHealth</p>
+                    </div>
+                    <p class="gridexerpt">
+                        derilojake2528.wixsite.com/jakederilointernblog
+                    </p>
+                    <a
+                        href="https://derilojake2528.wixsite.com/jakederilointernblog"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/gojo.JPG)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Ruffa Mae Gojo</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Gubat</p>
+                    </div>
+                    <p class="gridexerpt">
+                        ruffamaegojo75.wixsite.com/ojt-blog
+                    </p>
+                    <a
+                        href="https://ruffamaegojo75.wixsite.com/ojt-blog"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-2">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/encinares.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Rimart Encinares</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">TLC Laboratories</p>
+                    </div>
+                    <p class="gridexerpt">rimartencinares.wixsite.com</p>
+                    <a
+                        href="https://rimartencinares.wixsite.com/my-site-5"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <div class="gridy-2 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/manimtim.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Arianne Mae Manimtim</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">MetroHealth Sorsogon</p>
+                    </div>
+                    <p class="gridexerpt">
+                        ariannemaemanimtim.wixsite.com/manimtimtlc
+                    </p>
+                    <a
+                        href="https://ariannemaemanimtim.wixsite.com/manimtimtlc"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/estonanto.png)"
+                >
+                    &nbsp;
+                </div>
+                <div class="gridinfo">
+                    <h3>Racel Estonanto</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Gubat</p>
+                    </div>
+                    <p class="gridexerpt">
+                        racelestonanto.wixsite.com/my-site-1
+                    </p>
+                    <a
+                        href="https://racelestonanto.wixsite.com/my-site-1"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/empleo.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Riza Empleo</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Sorsogon City</p>
+                    </div>
+                    <p class="gridexerpt">
+                        empleoriza01.wixsite.com/myweeklyblog
+                    </p>
+                    <a
+                        href="https://empleoriza01.wixsite.com/myweeklyblog"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <!-- third part-->
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/dancil.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Lance William Dancil</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">SAFADECO Sorsogon</p>
+                    </div>
+                    <p class="gridexerpt">
+                        lancewilliamdancil.wixsite.com/dancil
+                    </p>
+                    <a
+                        href="https://lancewilliamdancil.wixsite.com/dancil"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/janaban.jpg)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>John Paul Janaban</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Sorsogon City</p>
+                    </div>
+                    <p class="gridexerpt">jpjanaban.wordpress.com</p>
+                    <a
+                        href="https://jpjanaban.wordpress.com"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/estremera.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Jade Estremera</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">DILG Sorsogon</p>
+                    </div>
+                    <p class="gridexerpt">estremerablog.vercel.app</p>
+                    <a
+                        href="https://estremerablog.vercel.app/"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/ayo.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Michael Joshua Ayo</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">
+                            Provincial Government of Sorsogon
+                        </p>
+                    </div>
+                    <p class="gridexerpt">michaeljoshuaayo.wixsite.com/home</p>
+                    <a
+                        href="https://michaeljoshuaayo.wixsite.com/home"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/dollente.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Janine Dollente</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">
+                            Provincial Government of Sorsogon
+                        </p>
+                    </div>
+                    <p class="gridexerpt">janinedollente.wixsite.com/my-site</p>
+                    <a
+                        href="https://janinedollente.wixsite.com/my-site"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/mendoza.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Dianne Trisha Mendoza</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">DEPED Sorsogon City</p>
+                    </div>
+                    <p class="gridexerpt">
+                        diannetrishamendoz.wixsite.com/mysite
+                    </p>
+                    <a
+                        href="https://diannetrishamendoz.wixsite.com/mysite"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <!-- fourth part-->
+            <div class="gridy-2 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/dioneda.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Arlene Dioneda</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Sorsogon City</p>
+                    </div>
+                    <p class="gridexerpt">
+                        arlenedioneda.wixsite.com/my-site-1
+                    </p>
+                    <a
+                        href="https://arlenedioneda.wixsite.com/my-site-1"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/delapena.jpg)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Edwin Dela Pena</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">DEPED Sorsogon City</p>
+                    </div>
+                    <p class="gridexerpt">delapenaedwin.blogspot.com</p>
+                    <a
+                        href="https://delapenaedwin.blogspot.com/"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/laurora.jpg)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Joaquim Philix Laurora</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">DepEd Sorsogon</p>
+                    </div>
+                    <p class="gridexerpt">laurora-ojtblog.vercel.app</p>
+                    <a
+                        href="http://laurora-ojtblog.vercel.app"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/espinola.jpeg)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Jerame Espinola</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">LGU Sorsogon City</p>
+                    </div>
+                    <p class="gridexerpt">djhen7452.wixsite.com/jerame</p>
+                    <a
+                        href="https://djhen7452.wixsite.com/jerame"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/demesa.jpg)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Kaye De Mesa</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">
+                            Provincial Government of Sorsogon
+                        </p>
+                    </div>
+                    <p class="gridexerpt">demesakayee.wordpress.com</p>
+                    <a
+                        href="https://demesakayee.wordpress.com/"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/dio.jpg)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Jhon Timothy James Dio</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">
+                            Provincial Government of Sorsogon
+                        </p>
+                    </div>
+                    <p class="gridexerpt">timothydio.wordpress.com</p>
+                    <a
+                        href="https://timothydio.wordpress.com/"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/hugo.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Jered Jeruel Hugo</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">DepEd Sorsogon</p>
+                    </div>
+                    <p class="gridexerpt">
+                        jeredhugo.wixsite.com/my-weekly-blog
+                    </p>
+                    <a
+                        href="https://jeredhugo.wixsite.com/my-weekly-blog"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/dreo.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Jonathan Dreo</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">TLC Laboratories</p>
+                    </div>
+                    <p class="gridexerpt">jonathandreo.wixsite.com/dreo-blog</p>
+                    <a
+                        href="https://jonathandreo.wixsite.com/dreo-blog"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <!-- last part-->
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/escobal.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Tom Andrei Escobal</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">Sorsogon East Central School</p>
+                    </div>
+                    <p class="gridexerpt">
+                        padillatom95.wixsite.com/tlc-ojt-weekly-blog
+                    </p>
+                    <a
+                        href="https://padillatom95.wixsite.com/tlc-ojt-weekly-blog"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/ofracio.jpg)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Abe Jay Ofracio</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">
+                            Provincial Government of Sorsogon
+                        </p>
+                    </div>
+                    <p class="gridexerpt">ajofracio.wordpress.com</p>
+                    <a
+                        href="https://ajofracio.wordpress.com"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+
+            <div class="gridy-1 gridyhe-1">
+                <div
+                    class="gridimg"
+                    style="background-image: url(images/rosas.png)"
+                >
+                    &nbsp;
+                </div>
+
+                <div class="gridinfo">
+                    <h3>Marcus Vincent Rosas</h3>
+                    <div class="gridmeta">
+                        <p class="gridwhen">DepEd Sorsogon</p>
+                    </div>
+                    <p class="gridexerpt">
+                        marcusrosaspracticumweeklyreport.wordpress.com/
+                    </p>
+                    <a
+                        href="https://marcusrosaspracticumweeklyreport.wordpress.com/"
+                        class="grid-btn grid-more"
+                        ><span>Visit</span> <i class="fa fa-plus">Site</i></a
+                    >
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
